@@ -29,7 +29,15 @@ function setup() {
   img.push(loadImage("flower4.jpeg"));  
   img.push(loadImage("plant1.jpeg"));    
   img.push(loadImage("plant2.jpeg"));   
-  img.push(loadImage("macbook.jpeg"));   
+  img.push(loadImage("macbook.jpeg"));
+  img.push(loadImage("bpa.JPG"));
+  img.push(loadImage("hallway.JPG"));
+  img.push(loadImage("water.JPG"));
+  img.push(loadImage("TuffWaterPhoto.JPG"));
+  img.push(loadImage("vada.JPG"));
+  img.push(loadImage("glowtree.JPG"));
+  img.push(loadImage("carlight.JPG"));
+  img.push(loadImage("camera.JPG"));
 
   // initialise hover colour per nav item
   for (var i = 0; i < navLabels.length; i++) hoverAlpha.push(0);
@@ -211,11 +219,19 @@ function drawPhotos() {
     // shadow
     noStroke();
     fill(0, 100);
-    rect(x + 8, y + 8, cell - gap, cell - gap, 6);
+        if(img[i].width > img[i].height == false) {
+    rect(x + s / 4+ 8, y + 8, img[i].width / (img[i].width / (s / 2)), cell - gap, 6);
+        }else{
+       rect(x + 8, y + 8, cell - gap, cell - gap, 6);   
+        }
 
     // image
     var s = cell - gap;
-    image(img[i], x, y, s, s, 0, 0, img[i].width, img[i].height);
+    if(img[i].width > img[i].height) {
+      image(img[i], x, y, s, s, 0, 0, img[i].width, img[i].height);
+    }else{
+      image(img[i], x + s / 4, y, img[i].width / (img[i].width / (s / 2)), s, 0, 0, img[i].width, img[i].height);
+    }
 
     // hover overlay
     var inCell = (mouseX > x && mouseX < x + s &&
