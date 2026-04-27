@@ -249,11 +249,11 @@ function drawHome() {
   textSize(bodySize);
   textWrap(WORD);
   text(
-    "Hello, my name is Evan Bailey and I'm the creator of this website. I made this site as a " +
-    "general-purpose home for future projects. Right now I'm showcasing photography — a hobby " +
+    "Hello, my name is Evan Bailey and I am the creator of this website. I made this site as a " +
+    "general purpose home for future projects. Right now I am showcasing photography, a hobby " +
     "I hope will one day pay for itself. I've been coding since 2017, and that skill is what " +
     "brought this site to life. Growing up, puzzles, challenges, and logic games always kept me " +
-    "engaged, and programming is the perfect extension of that: always another cool problem to solve.",
+    "engaged, and programming is the perfect fit of that.",
     cardX + 30, cardY + nameSize * 2.0, cardW - 60
   );
 
